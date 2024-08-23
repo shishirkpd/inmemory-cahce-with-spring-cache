@@ -66,6 +66,15 @@ curl -X PUT http://localhost:8080/api/users/1 -H "Content-Type: application/json
 curl -X DELETE http://localhost:8080/api/users/1
 ```
 
+#### Check cache
+```bash
+curl -X GET http://localhost:8080/api/users/cache/stats
+```
+#### output
+```json
+{"usersCache":"CacheStats{hitCount=8, missCount=0, loadSuccessCount=0, loadFailureCount=0, totalLoadTime=0, evictionCount=0, evictionWeight=0}"}
+```
+
 H2 Console
 You can access the H2 database console at
 ```bash 
